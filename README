@@ -1,0 +1,208 @@
+# ============================================================
+#  Metro Autónomo de Telemetría — Guía de Ejecución (ONE-BLOCK)
+#  Copia/pega este bloque en tu terminal y úsalo como checklist.
+#  Incluye: estructura de carpetas, server (C), clientes (Python/Java),
+#  y notas para Windows (WSL2). Edita las rutas a tu gusto.
+# ============================================================
+
+# =========[ 0) VARIABLES ÚTILES ]============================================
+# Cambia estas rutas si las usas en otro lugar:
+BASE_DIR="$HOME/Desktop/Metro"
+SERVER_DIR="$BASE_DIR/metro-server"
+CLIENTS_DIR="$BASE_DIR/clients"
+PY_CLIENT="$CLIENTS_DIR/client_py.py"
+JAVA_CLIENT="$CLIENTS_DIR/Client.java"
+PORT="5001"               # Puerto del servidor
+HOST_LOCAL="127.0.0.1"    # Host para probar en la misma máquina
+
+# =========[ 1) ESTRUCTURA RECOMENDADA ]======================================
+# Crea carpetas base (si no existen). NO toca tu código existente.
+mkdir -p "$SERVER_DIR" "$CLIENTS_DIR"
+
+cat <<'EOF'
+
+# ---------------------------------------------------------------------------
+# 2) SERVER (macOS / Linux)
+# ---------------------------------------------------------------------------
+# Requisitos:
+#   macOS:  xcode-select --install
+#   Linux:  sudo apt update && sudo apt install -y build-essential
+#
+# PASOS:
+#   1) Coloca tus fuentes del servidor (Makefile, server.c, etc.) dentro de:
+#        ~/Desktop/Metro/metro-server
+#   2) Compila:
+#        cd ~/Desktop/Metro/metro-server
+#        make              # usa make -B para forzar
+#   3) Ejecuta:
+#        ./server 5001 logs.txt
+#   4) Parar el server:
+#        Ctrl + C
+#   5) Si el puerto queda ocupado:
+#        lsof -nP -iTCP:5001 -sTCP:LISTEN
+#        kill <PID>   # o usa otro puerto: ./server 5002 logs.txt
+# ---------------------------------------------------------------------------
+
+EOF
+
+# =========[ 3) CLIENTE PYTHON (Tkinter) ]====================================
+cat <<'EOF'
+
+# ---------------------------------------------------------------------------
+# 3) CLIENTE PYTHON (GUI)
+# ---------------------------------------------------------------------------
+# Requisitos:
+#   macOS:   Instala Python 3 desde python.org (incluye Tkinter)
+#   Linux:   sudo apt install -y python3 python3-tk
+#   Windows: Instalador de python.org (marcar "Add Python to PATH")
+#
+# Ubicación esperada del cliente:
+#   ~/Desktop/Metro/clients/client_py.py
+#
+# Ejecutar (mismo puerto que el server):
+#   python3 ~/Desktop/Metro/clients/client_py.py --host 127.0.0.1 --port 5001
+#
+# Notas:
+#  - La primera telemetría puede tardar ~10 s.
+#  - Si cambias el puerto del server, ajusta --port.
+# ---------------------------------------------------------------------------
+
+EOF
+
+# =========[ 4) CLIENTE JAVA (Swing) ]========================================
+cat <<'EOF'
+
+# ---------------------------------------------------------------------------
+# 4) CLIENTE JAVA (GUI)
+# ---------------------------------------------------------------------------
+# Requisitos:
+#   macOS (Homebrew):  brew install --cask temurin
+#   Linux (Deb/Ubun):  sudo apt install -y default-jdk
+#   Windows:           Instalar Temurin/Adoptium u Oracle JDK (agregar a PATH)
+#
+# Ubicación esperada del cliente:
+#   ~/Desktop/Metro/clients/Client.java
+#
+# Compilar y ejecutar:
+#   cd ~/Desktop/Metro/clients
+#   javac Client.java
+#   java Client 127.0.0.1 5001
+#
+# Notas:
+#  - Si 'javac' no existe en macOS: brew install openjdk
+#    y exporta PATH si es necesario:
+#      echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
+# ---------------------------------------------------------------------------
+
+EOF
+
+# =========[ 5) PRUEBA RÁPIDA SIN GUI (netcat) ]==============================
+cat <<'EOF'
+
+# ---------------------------------------------------------------------------
+# 5) PRUEBA SIN GUI (opcional)
+# ---------------------------------------------------------------------------
+# macOS / Linux:
+#   nc 127.0.0.1 5001
+#   # verás TELEMETRY cada ~10 s
+#   # prueba un comando:
+#   CMD SPEED_UP
+# ---------------------------------------------------------------------------
+
+EOF
+
+# =========[ 6) EJECUTAR EN WINDOWS (WSL2 RECOMENDADO) ]=====================
+cat <<'EOF'
+
+# ---------------------------------------------------------------------------
+# 6) WINDOWS — RECOMENDADO: WSL2 + Ubuntu
+# ---------------------------------------------------------------------------
+# Server en C usa pthread + Berkeley sockets POSIX.
+# Lo más simple en Windows es correrlo en WSL2 (Ubuntu).
+#
+# (PowerShell como ADMIN) Instalar WSL + Ubuntu:
+#   wsl --install -d Ubuntu
+#   # reinicia si lo pide, abre "Ubuntu" y crea usuario Linux
+#
+# Dentro de Ubuntu (WSL):
+#   sudo apt update
+#   sudo apt install -y build-essential unzip
+#   # Copia tu proyecto desde C:\ a WSL (C: es /mnt/c/)
+#   cd ~
+#   cp -r /mnt/c/Users/TUUSUARIO/Desktop/Metro .
+#   cd ~/Metro/metro-server
+#   make
+#   ./server 5001 logs.txt
+#
+# Clientes desde Windows (PowerShell):
+#   # Python:
+#   python C:\Users\TUUSUARIO\Desktop\Metro\clients\client_py.py --host 127.0.0.1 --port 5001
+#   # Java:
+#   cd C:\Users\TUUSUARIO\Desktop\Metro\clients
+#   javac Client.java
+#   java Client 127.0.0.1 5001
+#
+# Notas:
+#  - Si el server corre en WSL, 127.0.0.1 funciona desde Windows (loopback WSL).
+#  - Windows nativo SIN WSL requeriría portar el server a Winsock (no recomendado).
+# ---------------------------------------------------------------------------
+
+EOF
+
+# =========[ 7) CONEXIONES DESDE OTRA MÁQUINA / FIREWALL ]===================
+cat <<'EOF'
+
+# ---------------------------------------------------------------------------
+# 7) CONEXIONES DESDE OTRA MÁQUINA
+# ---------------------------------------------------------------------------
+# - Usa la IP del host (no 127.0.0.1):
+#     macOS:  ipconfig getifaddr en0
+#     Linux:  ip addr
+#     Win:    ipconfig
+# - Abre el puerto en el firewall del SO.
+# - En AWS EC2: abre el puerto en el Security Group (inbound TCP <puerto>).
+# ---------------------------------------------------------------------------
+
+EOF
+
+# =========[ 8) SOLUCIÓN DE PROBLEMAS COMUNES ]==============================
+cat <<'EOF'
+
+# ---------------------------------------------------------------------------
+# 8) PROBLEMAS COMUNES
+# ---------------------------------------------------------------------------
+# A) "bind: Address already in use"
+#    lsof -nP -iTCP:5001 -sTCP:LISTEN
+#    kill <PID>   # o usa otro puerto: ./server 5002 logs.txt
+#
+# B) Cliente no muestra datos
+#    - Host/puerto coinciden con el server.
+#    - Espera ~10 s (intervalo de telemetría).
+#    - Prueba con: nc 127.0.0.1 5001
+#
+# C) macOS: "permission denied: ./server"
+#    chmod +x server
+#    # Si el binario era Linux (ELF), recompila en Mac:
+#    make clean && make
+#
+# D) Parar server en background por puerto:
+#    lsof -nP -iTCP:5001 -sTCP:LISTEN
+#    kill <PID>     # kill -9 <PID> si resiste
+# ---------------------------------------------------------------------------
+
+EOF
+
+# =========[ 9) RECORDATORIO FINAL ]==========================================
+cat <<EOF
+
+# ---------------------------------------------------------------------------
+# 9) RECORDATORIO
+# ---------------------------------------------------------------------------
+# - Arrancar server:
+#     cd "$SERVER_DIR" && ./server $PORT logs.txt
+# - Cliente Python:
+#     python3 "$PY_CLIENT" --host $HOST_LOCAL --port $PORT
+# - Cliente Java:
+#     cd "$CLIENTS_DIR" && javac Client.java && java Client $HOST_LOCAL $PORT
+# ---------------------------------------------------------------------------
+EOF

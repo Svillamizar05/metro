@@ -1,0 +1,392 @@
+[2025-09-27 00:52:26] Servidor escuchando en puerto 5000 ...
+[2025-09-27 00:52:26] TX :: TELEMETRY ts=1758952346 speed=30 battery=100 station=0 direction=OUTBOUND
+
+[2025-09-27 00:52:36] TX :: TELEMETRY ts=1758952356 speed=30 battery=99 station=0 direction=OUTBOUND
+
+[2025-09-27 00:52:46] TX :: TELEMETRY ts=1758952366 speed=30 battery=98 station=0 direction=OUTBOUND
+
+[2025-09-27 00:52:46] TX :: EVENT STATION_ARRIVAL id=0
+
+[2025-09-27 00:53:15] TX :: TELEMETRY ts=1758952395 speed=30 battery=97 station=1 direction=OUTBOUND
+
+[2025-09-27 00:53:24] TX :: TELEMETRY ts=1758952404 speed=30 battery=96 station=1 direction=OUTBOUND
+
+[2025-09-27 00:53:34] TX :: TELEMETRY ts=1758952414 speed=30 battery=95 station=1 direction=OUTBOUND
+
+[2025-09-27 00:53:34] TX :: EVENT STATION_ARRIVAL id=1
+
+[2025-09-27 00:54:03] TX :: TELEMETRY ts=1758952443 speed=30 battery=94 station=2 direction=OUTBOUND
+
+[2025-09-27 00:54:13] TX :: TELEMETRY ts=1758952453 speed=30 battery=93 station=2 direction=OUTBOUND
+
+[2025-09-27 00:54:23] TX :: TELEMETRY ts=1758952463 speed=30 battery=92 station=2 direction=OUTBOUND
+
+[2025-09-27 00:54:23] TX :: EVENT STATION_ARRIVAL id=2
+
+[2025-09-27 00:54:53] TX :: TELEMETRY ts=1758952493 speed=30 battery=91 station=3 direction=OUTBOUND
+
+[2025-09-27 00:55:01] TX :: TELEMETRY ts=1758952501 speed=30 battery=90 station=3 direction=OUTBOUND
+
+[2025-09-27 00:55:11] Cliente conectado 127.0.0.1:48478
+[2025-09-27 00:55:11] TX :: TELEMETRY ts=1758952511 speed=30 battery=89 station=3 direction=OUTBOUND
+
+[2025-09-27 00:55:11] TX :: EVENT STATION_ARRIVAL id=3
+
+[2025-09-27 00:55:35] RX 127.0.0.1:48478 :: CMD SPEED_UP
+[2025-09-27 00:55:40] TX :: TELEMETRY ts=1758952540 speed=35 battery=88 station=4 direction=OUTBOUND
+
+[2025-09-27 00:55:50] TX :: TELEMETRY ts=1758952550 speed=35 battery=87 station=4 direction=OUTBOUND
+
+[2025-09-27 00:56:00] TX :: TELEMETRY ts=1758952560 speed=35 battery=86 station=4 direction=OUTBOUND
+
+[2025-09-27 00:56:00] TX :: EVENT STATION_ARRIVAL id=4
+
+[2025-09-27 00:56:19] TX :: EVENT TURNAROUND
+[2025-09-27 00:56:29] TX :: TELEMETRY ts=1758952589 speed=35 battery=85 station=5 direction=INBOUND
+
+[2025-09-27 00:56:39] TX :: TELEMETRY ts=1758952599 speed=35 battery=84 station=5 direction=INBOUND
+
+[2025-09-27 00:56:49] TX :: TELEMETRY ts=1758952609 speed=35 battery=83 station=5 direction=INBOUND
+
+[2025-09-27 00:56:49] TX :: EVENT STATION_ARRIVAL id=5
+
+[2025-09-27 00:57:18] TX :: TELEMETRY ts=1758952638 speed=35 battery=82 station=6 direction=INBOUND
+
+[2025-09-27 00:57:26] TX :: TELEMETRY ts=1758952646 speed=35 battery=81 station=6 direction=INBOUND
+
+[2025-09-27 00:57:36] TX :: TELEMETRY ts=1758952656 speed=35 battery=80 station=6 direction=INBOUND
+
+[2025-09-27 00:57:36] TX :: EVENT STATION_ARRIVAL id=6
+
+[2025-09-27 00:58:05] TX :: TELEMETRY ts=1758952685 speed=35 battery=79 station=7 direction=INBOUND
+
+[2025-09-27 00:58:15] TX :: TELEMETRY ts=1758952695 speed=35 battery=78 station=7 direction=INBOUND
+
+[2025-09-27 00:58:24] TX :: TELEMETRY ts=1758952704 speed=35 battery=77 station=7 direction=INBOUND
+
+[2025-09-27 00:58:24] TX :: EVENT STATION_ARRIVAL id=7
+
+[2025-09-27 00:58:53] TX :: TELEMETRY ts=1758952733 speed=35 battery=76 station=8 direction=INBOUND
+
+[2025-09-27 00:59:03] TX :: TELEMETRY ts=1758952743 speed=35 battery=75 station=8 direction=INBOUND
+
+[2025-09-27 00:59:13] TX :: TELEMETRY ts=1758952753 speed=35 battery=74 station=8 direction=INBOUND
+
+[2025-09-27 00:59:13] TX :: EVENT STATION_ARRIVAL id=8
+
+[2025-09-28 14:59:02] Servidor escuchando en puerto 5001 ...
+[2025-09-28 14:59:02] TX :: TELEMETRY ts=1759089542 speed=30 battery=100 station=0 direction=OUTBOUND
+
+[2025-09-28 14:59:12] TX :: TELEMETRY ts=1759089552 speed=30 battery=99 station=0 direction=OUTBOUND
+
+[2025-09-28 14:59:22] TX :: TELEMETRY ts=1759089562 speed=30 battery=98 station=0 direction=OUTBOUND
+
+[2025-09-28 14:59:22] TX :: EVENT STATION_ARRIVAL id=0
+
+[2025-09-28 14:59:52] TX :: TELEMETRY ts=1759089592 speed=30 battery=97 station=1 direction=OUTBOUND
+
+[2025-09-28 14:59:56] Cliente conectado 127.0.0.1:50048
+[2025-09-28 15:00:02] TX :: TELEMETRY ts=1759089602 speed=30 battery=96 station=1 direction=OUTBOUND
+
+[2025-09-28 15:00:12] TX :: TELEMETRY ts=1759089612 speed=30 battery=95 station=1 direction=OUTBOUND
+
+[2025-09-28 15:00:12] TX :: EVENT STATION_ARRIVAL id=1
+
+[2025-09-28 15:00:25] Cliente conectado 127.0.0.1:50049
+[2025-09-28 15:00:42] TX :: TELEMETRY ts=1759089642 speed=30 battery=94 station=2 direction=OUTBOUND
+
+[2025-09-28 15:00:52] TX :: TELEMETRY ts=1759089652 speed=30 battery=93 station=2 direction=OUTBOUND
+
+[2025-09-28 15:01:02] RX 127.0.0.1:50048 :: CMD SPEED_UP
+[2025-09-28 15:01:02] TX :: TELEMETRY ts=1759089662 speed=35 battery=92 station=2 direction=OUTBOUND
+
+[2025-09-28 15:01:02] TX :: EVENT STATION_ARRIVAL id=2
+
+[2025-09-28 15:01:07] RX 127.0.0.1:50048 :: CMD SPEED_UP
+[2025-09-28 15:01:32] TX :: TELEMETRY ts=1759089692 speed=40 battery=91 station=3 direction=OUTBOUND
+
+[2025-09-28 15:01:42] TX :: TELEMETRY ts=1759089702 speed=40 battery=90 station=3 direction=OUTBOUND
+
+[2025-09-28 15:01:52] TX :: TELEMETRY ts=1759089712 speed=40 battery=89 station=3 direction=OUTBOUND
+
+[2025-09-28 15:01:52] TX :: EVENT STATION_ARRIVAL id=3
+
+[2025-09-28 15:02:22] TX :: TELEMETRY ts=1759089742 speed=40 battery=88 station=4 direction=OUTBOUND
+
+[2025-09-28 15:02:32] TX :: TELEMETRY ts=1759089752 speed=40 battery=87 station=4 direction=OUTBOUND
+
+[2025-09-28 15:02:42] TX :: TELEMETRY ts=1759089762 speed=40 battery=86 station=4 direction=OUTBOUND
+
+[2025-09-28 15:02:42] TX :: EVENT STATION_ARRIVAL id=4
+
+[2025-09-28 15:03:02] TX :: EVENT TURNAROUND
+[2025-09-28 15:03:12] TX :: TELEMETRY ts=1759089792 speed=40 battery=85 station=5 direction=INBOUND
+
+[2025-09-28 15:03:22] TX :: TELEMETRY ts=1759089802 speed=40 battery=84 station=5 direction=INBOUND
+
+[2025-09-28 15:03:32] TX :: TELEMETRY ts=1759089812 speed=40 battery=83 station=5 direction=INBOUND
+
+[2025-09-28 15:03:32] TX :: EVENT STATION_ARRIVAL id=5
+
+[2025-09-28 15:04:02] TX :: TELEMETRY ts=1759089842 speed=40 battery=82 station=6 direction=INBOUND
+
+[2025-09-28 15:04:12] TX :: TELEMETRY ts=1759089852 speed=40 battery=81 station=6 direction=INBOUND
+
+[2025-09-28 15:04:22] TX :: TELEMETRY ts=1759089862 speed=40 battery=80 station=6 direction=INBOUND
+
+[2025-09-28 15:04:22] TX :: EVENT STATION_ARRIVAL id=6
+
+[2025-09-28 15:04:52] TX :: TELEMETRY ts=1759089892 speed=40 battery=79 station=7 direction=INBOUND
+
+[2025-09-28 15:05:02] TX :: TELEMETRY ts=1759089902 speed=40 battery=78 station=7 direction=INBOUND
+
+[2025-09-28 15:05:12] TX :: TELEMETRY ts=1759089912 speed=40 battery=77 station=7 direction=INBOUND
+
+[2025-09-28 15:05:12] TX :: EVENT STATION_ARRIVAL id=7
+
+[2025-09-28 15:05:42] TX :: TELEMETRY ts=1759089942 speed=40 battery=76 station=8 direction=INBOUND
+
+[2025-09-28 15:05:52] TX :: TELEMETRY ts=1759089952 speed=40 battery=75 station=8 direction=INBOUND
+
+[2025-09-28 15:06:02] TX :: TELEMETRY ts=1759089962 speed=40 battery=74 station=8 direction=INBOUND
+
+[2025-09-28 15:06:02] TX :: EVENT STATION_ARRIVAL id=8
+
+[2025-09-28 15:06:32] TX :: TELEMETRY ts=1759089992 speed=40 battery=73 station=9 direction=INBOUND
+
+[2025-09-28 15:06:42] TX :: TELEMETRY ts=1759090002 speed=40 battery=72 station=9 direction=INBOUND
+
+[2025-09-28 15:06:52] TX :: TELEMETRY ts=1759090012 speed=40 battery=71 station=9 direction=INBOUND
+
+[2025-09-28 15:06:52] TX :: EVENT STATION_ARRIVAL id=9
+
+[2025-09-28 15:16:15] Servidor escuchando en puerto 5001 ...
+[2025-09-28 15:16:15] TX :: TELEMETRY ts=1759090575 speed=30 battery=100 station=0 direction=OUTBOUND
+
+[2025-09-28 15:16:25] TX :: TELEMETRY ts=1759090585 speed=30 battery=99 station=0 direction=OUTBOUND
+
+[2025-09-28 15:16:35] TX :: TELEMETRY ts=1759090595 speed=30 battery=98 station=0 direction=OUTBOUND
+
+[2025-09-28 15:16:35] TX :: EVENT STATION_ARRIVAL id=0
+
+[2025-09-28 15:17:05] TX :: TELEMETRY ts=1759090625 speed=30 battery=97 station=1 direction=OUTBOUND
+
+[2025-09-28 15:17:15] TX :: TELEMETRY ts=1759090635 speed=30 battery=96 station=1 direction=OUTBOUND
+
+[2025-09-28 15:17:25] TX :: TELEMETRY ts=1759090645 speed=30 battery=95 station=1 direction=OUTBOUND
+
+[2025-09-28 15:17:25] TX :: EVENT STATION_ARRIVAL id=1
+
+[2025-09-28 15:17:34] Cliente conectado 127.0.0.1:50079
+[2025-09-28 15:17:44] RX 127.0.0.1:50079 :: CMD SPEED_UP
+[2025-09-28 15:17:48] RX 127.0.0.1:50079 :: CMD SLOW_DOWN
+[2025-09-28 15:17:49] RX 127.0.0.1:50079 :: CMD STOPNOW
+[2025-09-28 15:17:50] RX 127.0.0.1:50079 :: CMD STARTNOW
+[2025-09-28 15:17:55] TX :: TELEMETRY ts=1759090675 speed=30 battery=94 station=2 direction=OUTBOUND
+
+[2025-09-28 15:17:57] Cliente desconectado 127.0.0.1:50079 (r=0 errno=0)
+[2025-09-28 15:18:05] TX :: TELEMETRY ts=1759090685 speed=30 battery=93 station=2 direction=OUTBOUND
+
+[2025-09-28 15:18:15] TX :: TELEMETRY ts=1759090695 speed=30 battery=92 station=2 direction=OUTBOUND
+
+[2025-09-28 15:18:15] TX :: EVENT STATION_ARRIVAL id=2
+
+[2025-09-28 15:18:17] Cliente conectado 127.0.0.1:50081
+[2025-09-28 15:18:45] TX :: TELEMETRY ts=1759090725 speed=30 battery=91 station=3 direction=OUTBOUND
+
+[2025-09-28 15:18:55] TX :: TELEMETRY ts=1759090735 speed=30 battery=90 station=3 direction=OUTBOUND
+
+[2025-09-28 15:19:05] TX :: TELEMETRY ts=1759090745 speed=30 battery=89 station=3 direction=OUTBOUND
+
+[2025-09-28 15:19:05] TX :: EVENT STATION_ARRIVAL id=3
+
+[2025-09-28 15:19:20] RX 127.0.0.1:50081 :: CMD SPEED_UP
+[2025-09-28 15:19:21] RX 127.0.0.1:50081 :: CMD SPEED_UP
+[2025-09-28 15:19:22] RX 127.0.0.1:50081 :: CMD SPEED_UP
+[2025-09-28 15:19:24] RX 127.0.0.1:50081 :: CMD SPEED_UP
+[2025-09-28 15:19:35] TX :: TELEMETRY ts=1759090775 speed=50 battery=88 station=4 direction=OUTBOUND
+
+[2025-09-28 15:19:39] RX 127.0.0.1:50081 :: CMD SLOW_DOWN
+[2025-09-28 15:19:45] TX :: TELEMETRY ts=1759090785 speed=45 battery=87 station=4 direction=OUTBOUND
+
+[2025-09-28 15:19:55] TX :: TELEMETRY ts=1759090795 speed=45 battery=86 station=4 direction=OUTBOUND
+
+[2025-09-28 15:19:55] TX :: EVENT STATION_ARRIVAL id=4
+
+[2025-09-28 15:20:15] TX :: EVENT TURNAROUND
+[2025-09-28 15:20:25] TX :: TELEMETRY ts=1759090825 speed=45 battery=85 station=5 direction=INBOUND
+
+[2025-09-28 15:20:35] TX :: TELEMETRY ts=1759090835 speed=45 battery=84 station=5 direction=INBOUND
+
+[2025-09-28 15:20:45] TX :: TELEMETRY ts=1759090845 speed=45 battery=83 station=5 direction=INBOUND
+
+[2025-09-28 15:20:45] TX :: EVENT STATION_ARRIVAL id=5
+
+[2025-09-28 15:27:48] Servidor escuchando en puerto 5001 ...
+[2025-09-28 15:27:48] TX :: TELEMETRY ts=1759091268 speed=30 battery=100 station=0 direction=OUTBOUND
+
+[2025-09-28 15:27:58] TX :: TELEMETRY ts=1759091278 speed=30 battery=99 station=0 direction=OUTBOUND
+
+[2025-09-28 15:28:08] TX :: TELEMETRY ts=1759091288 speed=30 battery=98 station=0 direction=OUTBOUND
+
+[2025-09-28 15:28:08] TX :: EVENT STATION_ARRIVAL id=0
+
+[2025-09-28 15:28:31] Cliente conectado 127.0.0.1:50201
+[2025-09-28 15:28:38] TX :: TELEMETRY ts=1759091318 speed=30 battery=97 station=1 direction=OUTBOUND
+
+[2025-09-28 15:28:48] TX :: TELEMETRY ts=1759091328 speed=30 battery=96 station=1 direction=OUTBOUND
+
+[2025-09-28 15:28:58] TX :: TELEMETRY ts=1759091338 speed=30 battery=95 station=1 direction=OUTBOUND
+
+[2025-09-28 15:28:58] TX :: EVENT STATION_ARRIVAL id=1
+
+[2025-09-28 15:29:28] TX :: TELEMETRY ts=1759091368 speed=30 battery=94 station=2 direction=OUTBOUND
+
+[2025-09-28 15:29:38] TX :: TELEMETRY ts=1759091378 speed=30 battery=93 station=2 direction=OUTBOUND
+
+[2025-09-28 15:29:48] TX :: TELEMETRY ts=1759091388 speed=30 battery=92 station=2 direction=OUTBOUND
+
+[2025-09-28 15:29:48] TX :: EVENT STATION_ARRIVAL id=2
+
+[2025-09-28 15:30:18] TX :: TELEMETRY ts=1759091418 speed=30 battery=91 station=3 direction=OUTBOUND
+
+[2025-09-28 15:30:28] TX :: TELEMETRY ts=1759091428 speed=30 battery=90 station=3 direction=OUTBOUND
+
+[2025-09-28 15:30:38] TX :: TELEMETRY ts=1759091438 speed=30 battery=89 station=3 direction=OUTBOUND
+
+[2025-09-28 15:30:38] TX :: EVENT STATION_ARRIVAL id=3
+
+[2025-09-28 15:31:08] TX :: TELEMETRY ts=1759091468 speed=30 battery=88 station=4 direction=OUTBOUND
+
+[2025-09-28 15:31:18] TX :: TELEMETRY ts=1759091478 speed=30 battery=87 station=4 direction=OUTBOUND
+
+[2025-09-28 15:31:28] TX :: TELEMETRY ts=1759091488 speed=30 battery=86 station=4 direction=OUTBOUND
+
+[2025-09-28 15:31:28] TX :: EVENT STATION_ARRIVAL id=4
+
+[2025-09-28 15:31:48] TX :: EVENT TURNAROUND
+[2025-09-28 15:31:56] Cliente conectado 127.0.0.1:50216
+[2025-09-28 15:31:58] TX :: TELEMETRY ts=1759091518 speed=30 battery=85 station=5 direction=INBOUND
+
+[2025-09-28 15:32:08] TX :: TELEMETRY ts=1759091528 speed=30 battery=84 station=5 direction=INBOUND
+
+[2025-09-28 15:32:18] TX :: TELEMETRY ts=1759091538 speed=30 battery=83 station=5 direction=INBOUND
+
+[2025-09-28 15:32:18] TX :: EVENT STATION_ARRIVAL id=5
+
+[2025-09-28 15:32:48] TX :: TELEMETRY ts=1759091568 speed=30 battery=82 station=6 direction=INBOUND
+
+[2025-09-28 15:32:58] TX :: TELEMETRY ts=1759091578 speed=30 battery=81 station=6 direction=INBOUND
+
+[2025-09-28 15:33:06] RX 127.0.0.1:50201 :: CMD STOPNOW
+[2025-09-28 15:33:08] TX :: TELEMETRY ts=1759091588 speed=0 battery=80 station=6 direction=INBOUND
+
+[2025-09-28 15:33:08] TX :: EVENT STATION_ARRIVAL id=6
+
+[2025-09-28 15:33:15] RX 127.0.0.1:50201 :: CMD STARTNOW
+[2025-09-28 15:33:38] TX :: TELEMETRY ts=1759091618 speed=30 battery=80 station=7 direction=INBOUND
+
+[2025-09-28 15:33:43] RX 127.0.0.1:50201 :: CMD SPEED_UP
+[2025-09-28 15:33:44] RX 127.0.0.1:50201 :: CMD SPEED_UP
+[2025-09-28 15:33:48] TX :: TELEMETRY ts=1759091628 speed=40 battery=79 station=7 direction=INBOUND
+
+[2025-09-28 15:33:58] TX :: TELEMETRY ts=1759091638 speed=40 battery=78 station=7 direction=INBOUND
+
+[2025-09-28 15:33:58] TX :: EVENT STATION_ARRIVAL id=7
+
+[2025-09-28 15:34:23] Cliente desconectado 127.0.0.1:50216 (r=0 errno=0)
+[2025-09-28 15:34:28] TX :: TELEMETRY ts=1759091668 speed=40 battery=77 station=8 direction=INBOUND
+
+[2025-09-28 15:34:28] Cliente conectado 127.0.0.1:50224
+[2025-09-28 15:34:38] TX :: TELEMETRY ts=1759091678 speed=40 battery=76 station=8 direction=INBOUND
+
+[2025-09-28 15:34:48] TX :: TELEMETRY ts=1759091688 speed=40 battery=75 station=8 direction=INBOUND
+
+[2025-09-28 15:34:48] TX :: EVENT STATION_ARRIVAL id=8
+
+[2025-09-28 15:35:18] TX :: TELEMETRY ts=1759091718 speed=40 battery=74 station=9 direction=INBOUND
+
+[2025-09-28 15:35:28] TX :: TELEMETRY ts=1759091728 speed=40 battery=73 station=9 direction=INBOUND
+
+[2025-09-28 15:35:38] TX :: TELEMETRY ts=1759091738 speed=40 battery=72 station=9 direction=INBOUND
+
+[2025-09-28 15:35:38] TX :: EVENT STATION_ARRIVAL id=9
+
+[2025-09-28 15:35:58] TX :: EVENT TURNAROUND
+[2025-09-28 15:36:08] TX :: TELEMETRY ts=1759091768 speed=40 battery=71 station=10 direction=OUTBOUND
+
+[2025-09-28 15:36:18] TX :: TELEMETRY ts=1759091778 speed=40 battery=70 station=10 direction=OUTBOUND
+
+[2025-09-28 15:36:28] TX :: TELEMETRY ts=1759091788 speed=40 battery=69 station=10 direction=OUTBOUND
+
+[2025-09-28 15:36:28] TX :: EVENT STATION_ARRIVAL id=10
+
+[2025-09-28 15:36:58] TX :: TELEMETRY ts=1759091818 speed=40 battery=68 station=11 direction=OUTBOUND
+
+[2025-09-28 15:37:08] TX :: TELEMETRY ts=1759091828 speed=40 battery=67 station=11 direction=OUTBOUND
+
+[2025-09-28 15:37:18] TX :: TELEMETRY ts=1759091838 speed=40 battery=66 station=11 direction=OUTBOUND
+
+[2025-09-28 15:37:18] TX :: EVENT STATION_ARRIVAL id=11
+
+[2025-09-28 15:37:48] TX :: TELEMETRY ts=1759091868 speed=40 battery=65 station=12 direction=OUTBOUND
+
+[2025-09-28 15:37:58] TX :: TELEMETRY ts=1759091878 speed=40 battery=64 station=12 direction=OUTBOUND
+
+[2025-09-28 15:38:08] TX :: TELEMETRY ts=1759091888 speed=40 battery=63 station=12 direction=OUTBOUND
+
+[2025-09-28 15:38:08] TX :: EVENT STATION_ARRIVAL id=12
+
+[2025-09-28 15:38:38] TX :: TELEMETRY ts=1759091918 speed=40 battery=62 station=13 direction=OUTBOUND
+
+[2025-09-28 15:38:48] TX :: TELEMETRY ts=1759091928 speed=40 battery=61 station=13 direction=OUTBOUND
+
+[2025-09-28 15:38:58] TX :: TELEMETRY ts=1759091938 speed=40 battery=60 station=13 direction=OUTBOUND
+
+[2025-09-28 15:38:58] TX :: EVENT STATION_ARRIVAL id=13
+
+[2025-09-28 15:39:28] TX :: TELEMETRY ts=1759091968 speed=40 battery=59 station=14 direction=OUTBOUND
+
+[2025-09-28 15:39:38] TX :: TELEMETRY ts=1759091978 speed=40 battery=58 station=14 direction=OUTBOUND
+
+[2025-09-28 15:39:48] TX :: TELEMETRY ts=1759091988 speed=40 battery=57 station=14 direction=OUTBOUND
+
+[2025-09-28 15:39:48] TX :: EVENT STATION_ARRIVAL id=14
+
+[2025-09-28 15:40:08] TX :: EVENT TURNAROUND
+[2025-09-28 15:40:18] TX :: TELEMETRY ts=1759092018 speed=40 battery=56 station=15 direction=INBOUND
+
+[2025-09-28 15:40:28] TX :: TELEMETRY ts=1759092028 speed=40 battery=55 station=15 direction=INBOUND
+
+[2025-09-28 15:40:38] TX :: TELEMETRY ts=1759092038 speed=40 battery=54 station=15 direction=INBOUND
+
+[2025-09-28 15:40:38] TX :: EVENT STATION_ARRIVAL id=15
+
+[2025-09-28 15:41:08] TX :: TELEMETRY ts=1759092068 speed=40 battery=53 station=16 direction=INBOUND
+
+[2025-09-28 15:41:18] TX :: TELEMETRY ts=1759092078 speed=40 battery=52 station=16 direction=INBOUND
+
+[2025-09-28 15:41:28] TX :: TELEMETRY ts=1759092088 speed=40 battery=51 station=16 direction=INBOUND
+
+[2025-09-28 15:41:28] TX :: EVENT STATION_ARRIVAL id=16
+
+[2025-09-28 15:41:58] TX :: TELEMETRY ts=1759092118 speed=40 battery=50 station=17 direction=INBOUND
+
+[2025-09-28 15:42:08] TX :: TELEMETRY ts=1759092128 speed=40 battery=49 station=17 direction=INBOUND
+
+[2025-09-28 15:42:18] TX :: TELEMETRY ts=1759092138 speed=40 battery=48 station=17 direction=INBOUND
+
+[2025-09-28 15:42:18] TX :: EVENT STATION_ARRIVAL id=17
+
+[2025-09-28 15:42:48] TX :: TELEMETRY ts=1759092168 speed=40 battery=47 station=18 direction=INBOUND
+
+[2025-09-28 15:42:58] TX :: TELEMETRY ts=1759092178 speed=40 battery=46 station=18 direction=INBOUND
+
+[2025-09-28 15:43:08] TX :: TELEMETRY ts=1759092188 speed=40 battery=45 station=18 direction=INBOUND
+
+[2025-09-28 15:43:08] TX :: EVENT STATION_ARRIVAL id=18
+
+[2025-09-28 15:43:38] TX :: TELEMETRY ts=1759092218 speed=40 battery=44 station=19 direction=INBOUND
+
+[2025-09-28 15:43:48] TX :: TELEMETRY ts=1759092228 speed=40 battery=43 station=19 direction=INBOUND
+
