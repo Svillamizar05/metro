@@ -160,14 +160,23 @@ static void* telemetry_thread(void* arg) {
         battery -= (speed > 0 ? 1 : 0); if (battery < 10) battery = 100; // demo
         tick++;
 
-        // Cada ~30s (3 ticks) simulamos llegada a estación -> parada 20s
-        if (tick % 3 == 0) {
+        // Distancia acumulada entre estaciones
+        static double distance_accum = 0.0;
+
+        // Cada ciclo de 10s calculamos cuánto avanza el metro
+        double hours = 10.0 / 3600.0;   // 10 segundos expresados en horas
+        distance_accum += speed * hours;
+
+        // ¿Llegó a la siguiente estación?
+        if (distance_accum >= 1.0) {   // suponemos 1 km entre estaciones
+            distance_accum -= 1.0;
+
             char ev[128];
             snprintf(ev, sizeof ev, "EVENT STATION_ARRIVAL id=%d\n", station);
             broadcast_line(ev);
             log_line("TX :: %s", ev);
 
-            // Parada 20s (sin telemetría en ese lapso)
+            // Parada de 20s
             sleep(20);
 
             station++;
