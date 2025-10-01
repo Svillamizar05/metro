@@ -3,6 +3,7 @@
 // - Hilos: aceptador, 1 por cliente, telemetría
 // - Telemetría cada 10s, evento de estación cada ~30s (parada 20s), inversión cada 5 estaciones
 
+#include <sys/time.h>  
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -142,33 +143,41 @@ static void* client_thread(void* arg) {
     return NULL;
 }
 
+static long long now_ms(void) {
+    struct timeval tv; gettimeofday(&tv, NULL);
+    return (long long)tv.tv_sec*1000LL + tv.tv_usec/1000;
+}
+
+static void sleep_ms(int ms) {
+    struct timespec ts = { ms/1000, (ms%1000)*1000000L };
+    nanosleep(&ts, NULL);
+}
+
+
 // ===== Hilo de telemetría =====
 static void* telemetry_thread(void* arg) {
     (void)arg;
-    int tick = 0;
-    while (1) {
-        // Cada 10s publicamos TELEMETRY
-        char line[256];
-        snprintf(line, sizeof line,
-                 "TELEMETRY ts=%ld speed=%d battery=%d station=%d direction=%s\n",
-                 (long)time(NULL), speed, battery, station,
-                 direction == 1 ? "OUTBOUND" : "INBOUND");
-        broadcast_line(line);
-        log_line("TX :: %s", line);
 
-        // Actualizamos “estado”
-        battery -= (speed > 0 ? 1 : 0); if (battery < 10) battery = 100; // demo
-        tick++;
+    // Estado auxiliar para el tiempo y la distancia
+    long long last_ms          = now_ms();
+    long long next_telemetry_ms= last_ms + 10000;     // cada 10 s
+    long long stop_until_ms    = 0;                   // fin de parada si >0
+    double     distance_accum  = 0.0;                 // km; 1.0 km == 1 estación
 
-        // Distancia acumulada entre estaciones
-        static double distance_accum = 0.0;
+    for (;;) {
+        long long t = now_ms();
+        long long dt_ms = t - last_ms;
+        if (dt_ms < 0) dt_ms = 0;  // por si cambia el reloj
+        last_ms = t;
 
-        // Cada ciclo de 10s calculamos cuánto avanza el metro
-        double hours = 10.0 / 3600.0;   // 10 segundos expresados en horas
-        distance_accum += speed * hours;
+        // 1) Integración de distancia SOLO si no estamos en parada
+        if (stop_until_ms == 0) {
+            double dt_h = (double)dt_ms / 3600000.0;   // ms -> horas
+            distance_accum += speed * dt_h;            // km/h * h = km
+        }
 
-        // ¿Llegó a la siguiente estación?
-        if (distance_accum >= 1.0) {   // suponemos 1 km entre estaciones
+        // 2) Llegada a estación cuando acumulamos 1.0 km
+        if (stop_until_ms == 0 && distance_accum >= 1.0) {
             distance_accum -= 1.0;
 
             char ev[128];
@@ -176,9 +185,15 @@ static void* telemetry_thread(void* arg) {
             broadcast_line(ev);
             log_line("TX :: %s", ev);
 
-            // Parada de 20s
-            sleep(20);
+            // programar parada de 20 s SIN bloquear
+            stop_until_ms = t + 20000;
+        }
 
+        // 3) Final de parada (20 s)
+        if (stop_until_ms > 0 && t >= stop_until_ms) {
+            stop_until_ms = 0;
+
+            // avanzar estación y posible cambio de sentido
             station++;
             if (station > 0 && station % 5 == 0) {
                 direction = -direction;
@@ -187,10 +202,31 @@ static void* telemetry_thread(void* arg) {
             }
         }
 
-        sleep(10);
+        // 4) Telemetría cada 10 s (independiente del movimiento)
+        if (t >= next_telemetry_ms) {
+            next_telemetry_ms += 10000; // siguiente slot de 10 s
+
+            // batería “demo”: solo drena si NOS MOVEMOS (no en parada)
+            if (stop_until_ms == 0 && speed > 0) {
+                battery -= 1;
+                if (battery < 10) battery = 100; // recarga demo para no "morir"
+            }
+
+            char line[256];
+            snprintf(line, sizeof line,
+                     "TELEMETRY ts=%ld speed=%d battery=%d station=%d direction=%s\n",
+                     (long)time(NULL), speed, battery, station,
+                     direction == 1 ? "OUTBOUND" : "INBOUND");
+            broadcast_line(line);
+            log_line("TX :: %s", line);
+        }
+
+        // 5) Pequeña siesta para no quemar CPU (50 ms)
+        sleep_ms(50);
     }
     return NULL;
 }
+
 
 int main(int argc, char** argv) {
     if (argc != 3) {
